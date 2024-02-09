@@ -6,7 +6,7 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:13:39 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/02/08 18:26:27 by rherraiz         ###   ########.fr       */
+/*   Updated: 2024/01/30 04:50:30 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* ft_substr devuelve una subcadena con los caracteres de start a len
@@ -29,38 +29,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	i;
-	size_t	j;
 
-	j = 0;
 	i = 0;
-	str = (char *)s;
-	if (!str)
-	{
-		return (NULL);
-	}
-	if (ft_strlen(s) < start)
+	if (s == NULL)
+		return (0);
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	str = malloc((ft_strlen(s) + 1) * sizeof(*s));
-	while (s[i] != '\0')
+	if ((ft_strlen(s) - start) < len)
+		str = (char *)malloc(sizeof(char) * (ft_strlen(s) - start + 1));
+	else
+		str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s[i] != '\0' && i < len)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		str[i] = s[start + i];
 		i++;
 	}
-	str[j] = '\0';
+	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char str[] = "";
-	unsigned int start = 0;
-	size_t len = 0;
-
-	printf("%s",ft_substr(str,start,len));
-}
-*/

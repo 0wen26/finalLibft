@@ -6,13 +6,13 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:14:28 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/02/09 17:09:19 by rherraiz         ###   ########.fr       */
+/*   Updated: 2024/02/03 02:43:01 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_search(char const *set, char c)
+int	ft_search(char const *set, char c)
 {
 	int	i;
 

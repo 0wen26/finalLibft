@@ -6,13 +6,13 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:14:53 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/02/09 17:08:20 by rherraiz         ###   ########.fr       */
+/*   Updated: 2024/02/05 03:29:01 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_string(char *str, unsigned int len, unsigned int n)
+void	ft_string(char *str, unsigned int len, unsigned int n)
 {
 	while (n > 0)
 	{
@@ -21,7 +21,7 @@ static void	ft_string(char *str, unsigned int len, unsigned int n)
 	}
 }
 
-static int	ft_length(int n)
+int	ft_length(int n)
 {
 	int	len;
 
