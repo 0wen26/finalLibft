@@ -6,7 +6,7 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:40:38 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/02/09 15:58:02 by rherraiz         ###   ########.fr       */
+/*   Updated: 2024/02/09 16:45:30 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -31,17 +31,19 @@ static  size_t ft_counter(char const *s, char c)
 	return (count);
 }
 
-/*
-static size_t	ft_numStr()
+
+static size_t	ft_numStr(const char *s, char c)
 {
+	size_t	i;
 
-
-
+	i = 0;
+	while (s[i] != '\0' && s[i] != c)
+		i++;
+	return (i);
 }
 
 
-
-
+/*
 char	**ft_split(char const *s, char c)
 {
 
