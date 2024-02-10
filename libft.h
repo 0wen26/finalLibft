@@ -280,7 +280,7 @@ char		*ft_strtrim(char const *s1, char const *set);
  * c -> el caracter delimitador.
  *
  */
-//char		**ft_split(char const *s, char c);
+char		**ft_split(const char *s, char c);
 
 /* ft_itoa Utilizando malloc genera una string que represente el valor
  * entero recibido como argumento.

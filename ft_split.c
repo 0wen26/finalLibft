@@ -13,7 +13,7 @@
 
 #include <stdio.h>
 
-static size_t	ft_counter(char const *s, char c)
+static size_t	ft_counter(const char *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -41,11 +41,44 @@ static size_t	ft_numstr(const char *s, char c)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_free_array(const char **array, size_t words)
 {
+	while (words > 0)
+	{
+		words--;
+		free((void *)array[words]);
+	}
+	free(array);
+	return (NULL);
+}
 
+char	**ft_split(const char *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	char	**array;
+	size_t	words;
 
-
+	words = ft_counter(s, c);
+	i = 0;
+	j = 0;
+	array = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!array)
+		return (NULL);
+	while (i < words)
+	{
+		while (*s == c)
+			s++;
+		j = ft_numstr((const char *)s, c);
+		array[i] = (char *) malloc(sizeof(char) * j + 1);
+		if (!array[i])
+			return (ft_free_array((const char **)array, words));
+		ft_strlcpy(array[i], s, j + 1);
+		s = (ft_strchr(s, (int)c));
+		i++;
+	}
+	array[i] = '\0';
+	return (array);
 }
 /*
 int main()
