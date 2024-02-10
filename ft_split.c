@@ -41,12 +41,15 @@ static size_t	ft_numstr(const char *s, char c)
 	return (i);
 }
 
-static char	**ft_free_array(const char **array, size_t words)
+static char	**ft_free_array(const char **array)
 {
-	while (words > 0)
+	int	i;
+
+	i = 0;
+	while (array[i])
 	{
-		words--;
-		free((void *)array[words]);
+		free((void *)array[i]);
+		i++;
 	}
 	free(array);
 	return (NULL);
@@ -70,10 +73,10 @@ char	**ft_split(const char *s, char c)
 		while (*s == c)
 			s++;
 		j = ft_numstr((const char *)s, c);
-		array[i] = (char *) malloc(sizeof(char) * j + 1);
+		array[i] = (char *) malloc(sizeof(char) * (j + 1));
 		if (!array[i])
-			return (ft_free_array((const char **)array, words));
-		ft_strlcpy(array[i], s, j + 1);
+			return (ft_free_array((const char **)array));
+		ft_strlcpy(array[i], s, (j + 1));
 		s = (ft_strchr(s, (int)c));
 		i++;
 	}
@@ -83,9 +86,24 @@ char	**ft_split(const char *s, char c)
 /*
 int main()
 {
-	char const s[] = "  Hola    que     tal    ";
-	char c = ' ';
-	printf("%lu", ft_counter(s,c));
+	const char s[] = "^^^1^^2a,^^^^3^^^^--h^^^^";
+	char **c = ft_split(s,'^');
+	int i =0;
+
+	while (c[i] != NULL)
+	{
+		printf("%s\n",c[i]);
+		i++;
+	}
+	i = 0;
+	while (c[i] != NULL)
+	{
+		free(c[i] );
+		i++;
+	}
+
+	free (c);
+
 	return 0;
 }
 */
