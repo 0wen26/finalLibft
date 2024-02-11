@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_search(char const *set, char c)
+static int	ft_search(char const *set, char c)
 {
 	int	i;
 

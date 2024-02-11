@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_string(char *str, unsigned int len, unsigned int n)
+static void	ft_string(char *str, unsigned int len, unsigned int n)
 {
 	while (n > 0)
 	{
@@ -21,7 +21,7 @@ void	ft_string(char *str, unsigned int len, unsigned int n)
 	}
 }
 
-int	ft_length(int n)
+static int	ft_len(int n)
 {
 	int	len;
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	unsigned int	number;
 	unsigned int	len;
 
-	len = ft_length(n);
+	len = ft_len(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
