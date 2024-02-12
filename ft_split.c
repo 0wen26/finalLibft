@@ -6,7 +6,7 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:14:42 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/02/03 05:13:35 by root             ###   ########.fr       */
+/*   Updated: 2024/02/12 11:15:59 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -80,7 +80,7 @@ char	**ft_split(const char *s, char c)
 		s = (ft_strchr(s, (int)c));
 		i++;
 	}
-	array[i] = '\0';
+	array[i] = 0;
 	return (array);
 }
 /*
