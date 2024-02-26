@@ -6,7 +6,7 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:12:52 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/01/20 02:18:20 by root             ###   ########.fr       */
+/*   Updated: 2024/02/12 13:31:37 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (signo * result);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char str[25] = "\n \t-12 3r1235";
-	printf("%d",ft_atoi(str));
-}
-*/

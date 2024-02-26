@@ -6,7 +6,7 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:49:01 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/01/20 05:45:01 by root             ###   ########.fr       */
+/*   Updated: 2024/02/12 14:02:54 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,11 +17,3 @@ int	ft_toupper(int c)
 		return (c -32);
 	return (c);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	printf("%d",ft_toupper('5'));
-}
-*/

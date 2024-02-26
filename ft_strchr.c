@@ -6,17 +6,9 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:26:22 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/01/30 02:54:53 by root             ###   ########.fr       */
+/*   Updated: 2024/02/12 13:44:33 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* ft_strchr se utiliza para buscar la primera aparicion
-* de un caracter especifico en una cadena de caracteres.
-* si se encuentra el caracter devuelve un puntero a la posicion
-* del caracter en la cadena, de lo contrario devuelve null.
-*
-* str -> puntero a la cadena en la que se realizara la busqueda
-* c -> caracter que se está buscando.
-**/
 #include "libft.h" 
 
 char	*ft_strchr(const char *str, int c)

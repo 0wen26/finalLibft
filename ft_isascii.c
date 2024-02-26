@@ -6,7 +6,7 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:01:56 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/01/20 05:42:05 by root             ###   ########.fr       */
+/*   Updated: 2024/02/12 14:03:23 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,11 +17,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	printf("%d",ft_isascii('0'));
-}
-*/

@@ -6,10 +6,9 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 17:22:24 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/01/20 05:41:33 by root             ###   ########.fr       */
+/*   Updated: 2024/02/12 13:34:01 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isalpha(int c)
@@ -18,10 +17,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main()
-{
-	printf("%d",ft_isalpha(130));
-
-}
-*/

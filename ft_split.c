@@ -6,12 +6,10 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:14:42 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/02/12 11:15:59 by rherraiz         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:43:45 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-#include <stdio.h>
 
 static size_t	ft_counter(const char *s, char c)
 {
@@ -83,27 +81,3 @@ char	**ft_split(const char *s, char c)
 	array[i] = 0;
 	return (array);
 }
-/*
-int main()
-{
-	const char s[] = "^^^1^^2a,^^^^3^^^^--h^^^^";
-	char **c = ft_split(s,'^');
-	int i =0;
-
-	while (c[i] != NULL)
-	{
-		printf("%s\n",c[i]);
-		i++;
-	}
-	i = 0;
-	while (c[i] != NULL)
-	{
-		free(c[i] );
-		i++;
-	}
-
-	free (c);
-
-	return 0;
-}
-*/

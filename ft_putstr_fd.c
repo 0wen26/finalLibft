@@ -6,7 +6,7 @@
 /*   By: rherraiz <rherraiz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:15:50 by rherraiz          #+#    #+#             */
-/*   Updated: 2024/01/30 23:15:20 by root             ###   ########.fr       */
+/*   Updated: 2024/02/12 14:24:43 by rherraiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s != NULL)
+	if (fd >= 0)
 	{
-		while (*s != '\0')
+		if (s != NULL)
 		{
-			ft_putchar_fd(*s, fd);
-			s++;
+			while (*s != '\0')
+			{
+				ft_putchar_fd(*s, fd);
+				s++;
+			}
 		}
 	}
+	return ;
 }
